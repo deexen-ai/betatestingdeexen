@@ -41,7 +41,7 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
     };
 
     const handleShare = (platform: "twitter" | "linkedin" | "copy") => {
-        const url = "https://waitlistdeexen.vercel.app";
+        const url = "https://betatestingdeexen.vercel.app";
         const text = "Just secured my spot in the Founding 50 for Deexen - the first AI IDE that teaches you as you code. 🚀";
 
         const links = {
