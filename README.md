@@ -1,36 +1,85 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Deexen AI — Waitlist / Early Access Page
 
-## Getting Started
+A modern, premium single-page Next.js marketing site for Deexen AI's waitlist and Founding Beta Tester Program.
 
-First, run the development server:
+## Tech Stack
+
+- **Next.js 15** (App Router, TypeScript)
+- **Tailwind CSS v4**
+- **Google Sheets** (via Apps Script for email collection)
+
+## Quick Start
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Open [http://localhost:3000](http://localhost:3000).
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Google Sheets Setup
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+### 1. Create a Google Sheet
 
-## Learn More
+Create a new Google Sheet with two columns: `Email` and `Timestamp`.
 
-To learn more about Next.js, take a look at the following resources:
+### 2. Add the Apps Script
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Go to **Extensions → Apps Script** in your Google Sheet and paste this code:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```javascript
+function doPost(e) {
+  var sheet = SpreadsheetApp.getActiveSpreadsheet().getActiveSheet();
+  var data = JSON.parse(e.postData.contents);
+  
+  // Check for duplicate emails
+  var emails = sheet.getRange("A:A").getValues().flat();
+  if (emails.includes(data.email)) {
+    return ContentService
+      .createTextOutput(JSON.stringify({ status: "duplicate" }))
+      .setMimeType(ContentService.MimeType.JSON);
+  }
+  
+  sheet.appendRow([data.email, data.timestamp || new Date().toISOString()]);
+  
+  return ContentService
+    .createTextOutput(JSON.stringify({ status: "success" }))
+    .setMimeType(ContentService.MimeType.JSON);
+}
+```
 
-## Deploy on Vercel
+### 3. Deploy as Web App
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+1. Click **Deploy → New deployment**
+2. Select **Web app** as the type
+3. Set **Execute as**: Me
+4. Set **Who has access**: Anyone
+5. Click **Deploy** and copy the Web App URL
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### 4. Set the Environment Variable
+
+Copy `.env.example` to `.env.local` and paste your Web App URL:
+
+```bash
+GOOGLE_SHEET_URL=https://script.google.com/macros/s/YOUR_SCRIPT_ID/exec
+```
+
+## Project Structure
+
+```
+app/
+├── api/waitlist/route.ts   # POST endpoint for email submissions
+├── globals.css             # Tailwind config + design tokens
+├── layout.tsx              # Root layout with SEO metadata
+└── page.tsx                # Main page (all sections)
+components/
+├── Navbar.tsx              # Sticky nav with scroll blur
+├── Hero.tsx                # Hero section with email form
+├── WaitlistForm.tsx        # Reusable email capture form
+├── Features.tsx            # 5 AI modes showcase
+├── IDEShowcase.tsx         # IDE features + code mockup
+├── BetaProgram.tsx         # Beta tester program details
+├── Roadmap.tsx             # Coming soon features
+├── FinalCTA.tsx            # Bottom email capture
+└── Footer.tsx              # Minimal footer
+```

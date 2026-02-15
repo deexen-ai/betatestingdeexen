@@ -1,42 +1,85 @@
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@import "tailwindcss";
+
+@theme {
+  --color-bg-outer: #050505;
+  --color-bg-inner: #000000;
+
+  --color-border: #333333;
+  --color-border-subtle: #222222;
+
+  --font-sans: var(--font-outfit), system-ui, sans-serif;
+  --font-script: var(--font-script), cursive;
+  --font-mono: 'JetBrains Mono', monospace;
 }
 
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
-}
-
-html,
-body {
-  max-width: 100vw;
-  overflow-x: hidden;
-}
-
-body {
-  color: var(--foreground);
-  background: var(--background);
-  font-family: Arial, Helvetica, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-* {
-  box-sizing: border-box;
-  padding: 0;
-  margin: 0;
-}
-
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-@media (prefers-color-scheme: dark) {
+@layer base {
   html {
-    color-scheme: dark;
+    background-color: var(--color-bg-outer);
+    scroll-behavior: smooth;
   }
+
+  body {
+    font-family: var(--font-family-sans);
+    background-color: var(--color-bg-outer);
+    color: #888;
+    line-height: 1.5;
+    /* Dot pattern background for the "outside" area */
+    background-image: radial-gradient(#222 1px, transparent 1px);
+    background-size: 24px 24px;
+    min-height: 100vh;
+    /* Full screen layout - no margins */
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}
+
+@layer components {
+
+  /* Full Screen Container with Constrained Width */
+  .app-full-screen {
+    width: 95%;
+    max-width: 1152px;
+    /* Restored width constraint */
+    margin: 0 auto !important;
+    /* Centered horizontally, 0 vertically */
+    padding: 0 !important;
+    background-color: var(--color-bg-inner);
+    border-left: 1px solid var(--color-border);
+    border-right: 1px solid var(--color-border);
+    border-radius: 0;
+    min-height: 100vh;
+    box-shadow: none;
+    overflow-x: hidden;
+  }
+
+  /* Grid lines inside the box */
+  .grid-pattern {
+    background-image:
+      linear-gradient(to right, #222 1px, transparent 1px),
+      linear-gradient(to bottom, #222 1px, transparent 1px);
+    background-size: 48px 48px;
+    mask-image: linear-gradient(to bottom, transparent, black 5%, black 95%, transparent);
+  }
+
+  .btn-primary {
+    background: #fff;
+    color: #000;
+    font-weight: 600;
+    transition: all 0.2s;
+  }
+
+  .btn-primary:hover {
+    background: #e5e5e5;
+  }
+}
+
+.reveal {
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
 }
