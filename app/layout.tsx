@@ -1,19 +1,5 @@
 import type { Metadata } from "next";
-import { Outfit, Joti_One } from "next/font/google";
 import "./globals.css";
-
-const outfit = Outfit({
-  subsets: ["latin"],
-  variable: "--font-outfit",
-  display: "swap",
-});
-
-const jotiOne = Joti_One({
-  weight: "400",
-  subsets: ["latin"],
-  variable: "--font-script",
-  display: "swap",
-});
 
 export const metadata: Metadata = {
   title: "Deexen AI — The AI-Powered IDE for Learning & Development",
@@ -45,7 +31,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${outfit.variable} ${jotiOne.variable} font-sans`}>{children}</body>
+      <body className="font-sans antialiased">{children}</body>
     </html>
   );
 }
