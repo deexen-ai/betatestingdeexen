@@ -24,10 +24,10 @@ export default function BetaProgram() {
 
                 {/* Left: Info */}
                 <div className="p-12 lg:p-20 reveal">
-                    <div className="inline-block px-3 py-1 rounded-full border border-orange-900/30 bg-orange-900/10 text-orange-500 text-xs font-bold uppercase tracking-widest mb-6">
+                    <div className="inline-block px-3 py-1 rounded-full border border-orange-900/30 bg-orange-900/10 text-orange-500 text-xs font-medium uppercase tracking-widest mb-6">
                         Limited Access
                     </div>
-                    <h2 className="text-3xl md:text-4xl font-bold font-script text-white mb-6">Founding Beta Tester Program</h2>
+                    <h2 className="text-3xl md:text-4xl font-semibold text-white mb-6">Founding Beta Tester Program</h2>
                     <p className="text-[#888] mb-8 leading-relaxed">
                         We are launching a structured beta testing program (Cohort 1) to validate product quality
                         and gather feedback before public release.
@@ -35,11 +35,11 @@ export default function BetaProgram() {
 
                     <div className="space-y-6">
                         <div>
-                            <h4 className="text-white font-bold text-sm mb-2">Objective</h4>
+                            <h4 className="text-white font-medium text-sm mb-2">Objective</h4>
                             <p className="text-[#666] text-sm">Validate product quality, gather real feedback, and refine platform.</p>
                         </div>
                         <div>
-                            <h4 className="text-white font-bold text-sm mb-2">Plan</h4>
+                            <h4 className="text-white font-medium text-sm mb-2">Plan</h4>
                             <p className="text-[#666] text-sm">Select 50 testers. Provide early access. Collect feedback.</p>
                         </div>
                     </div>
@@ -55,7 +55,7 @@ export default function BetaProgram() {
 
                 {/* Right: Incentives */}
                 <div className="bg-[#050505] p-12 lg:p-20 reveal reveal-delay-2">
-                    <h3 className="text-xl font-bold text-white mb-8">Incentives</h3>
+                    <h3 className="text-xl font-medium text-white mb-8">Incentives</h3>
                     <ul className="space-y-6">
                         {[
                             { title: "1 Month Premium", desc: "Free access upon active participation." },

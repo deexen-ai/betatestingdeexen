@@ -55,7 +55,7 @@ export default function Features() {
     return (
         <section className="bg-black border-b border-[#333]" id="features" ref={sectionRef}>
             <div className="p-12 border-b border-[#333] text-center">
-                <h2 className="text-3xl md:text-4xl font-bold font-script text-white tracking-tight mb-2">Multiple AI Modes</h2>
+                <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight mb-2">Multiple AI Modes</h2>
                 <p className="text-[#666]">Depending on your learning or development preference.</p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-5 divide-y md:divide-y-0 md:divide-x divide-[#333]">
@@ -71,7 +71,7 @@ export default function Features() {
                             {feat.icon}
                         </div>
 
-                        <h3 className="font-bold text-white text-base mb-2 group-hover:text-orange-500 transition-colors duration-300">{feat.title}</h3>
+                        <h3 className="font-medium text-white text-base mb-2 group-hover:text-orange-500 transition-colors duration-300">{feat.title}</h3>
                         <p className="text-[#888] text-sm leading-relaxed group-hover:text-[#aaa] transition-colors">{feat.desc}</p>
                     </div>
                 ))}

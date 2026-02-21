@@ -1,6 +1,12 @@
 import type { Metadata } from "next";
+import localFont from "next/font/local";
 import "./globals.css";
 
+const sfPro = localFont({
+  src: "../public/fonts/SFPRODISPLAYREGULAR.otf",
+  variable: "--font-sf-pro",
+  display: "swap",
+});
 export const metadata: Metadata = {
   title: "Deexen AI — The AI-Powered IDE for Learning & Development",
   description:
@@ -31,7 +37,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className="font-sans antialiased">{children}</body>
+      <body className={`${sfPro.variable} font-sans antialiased`}>{children}</body>
     </html>
   );
 }

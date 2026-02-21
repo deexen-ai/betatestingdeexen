@@ -106,7 +106,7 @@ export default function BetaPage() {
                             <span className="text-[#333]">·</span>
                             <span className="text-[#555] text-xs font-mono">50 spots</span>
                         </div>
-                        <h1 className="text-2xl md:text-4xl font-bold font-script text-white tracking-tight mb-2">
+                        <h1 className="text-2xl md:text-4xl font-semibold text-white tracking-tight mb-2">
                             Founding Beta Tester Program
                         </h1>
                         <p className="text-[#666] text-sm max-w-xl">
@@ -123,7 +123,7 @@ export default function BetaPage() {
                             { value: "✓", label: "Certificate" },
                         ].map((stat, i) => (
                             <div key={i} className={`py-4 px-6 text-center ${i < 3 ? "border-r border-[#222]" : ""}`}>
-                                <p className={`text-sm font-bold ${stat.value === "Free" ? "text-orange-500" : "text-white"}`}>{stat.value}</p>
+                                <p className={`text-sm font-medium ${stat.value === "Free" ? "text-orange-500" : "text-white"}`}>{stat.value}</p>
                                 <span className="text-[10px] font-mono text-[#555] uppercase tracking-widest">{stat.label}</span>
                             </div>
                         ))}
@@ -144,7 +144,7 @@ export default function BetaPage() {
                                 </div>
                                 <div>
                                     <span className="text-[10px] font-mono text-orange-500 uppercase tracking-widest block mb-1">The Mission</span>
-                                    <h3 className="text-xl md:text-2xl font-bold font-script text-white tracking-tight">What You Build</h3>
+                                    <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight">What You Build</h3>
                                 </div>
                             </div>
 
@@ -158,7 +158,7 @@ export default function BetaPage() {
                                     <div key={i} className="flex gap-4 p-4 border border-dashed border-[#222] bg-[#050505] hover:border-orange-500/30 hover:bg-[#0a0a0a] transition-all duration-300 group/item">
                                         <div className="font-mono text-[#333] group-hover/item:text-orange-500/50 transition-colors text-sm pt-0.5">0{i + 1}</div>
                                         <div>
-                                            <h4 className="text-white text-sm font-bold mb-1 group-hover/item:text-orange-400 transition-colors">{item.title}</h4>
+                                            <h4 className="text-white text-sm font-medium mb-1 group-hover/item:text-orange-400 transition-colors">{item.title}</h4>
                                             <p className="text-[#666] text-xs leading-relaxed group-hover/item:text-[#888] transition-colors">{item.desc}</p>
                                         </div>
                                     </div>
@@ -177,7 +177,7 @@ export default function BetaPage() {
                                 </div>
                                 <div>
                                     <span className="text-[10px] font-mono text-[#666] uppercase tracking-widest block mb-1">The Bounties</span>
-                                    <h3 className="text-xl md:text-2xl font-bold font-script text-white tracking-tight">What You Earn</h3>
+                                    <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight">What You Earn</h3>
                                 </div>
                             </div>
 
@@ -185,25 +185,25 @@ export default function BetaPage() {
                                 <div className="p-5 border border-dashed border-orange-500/30 bg-orange-500/5 hover:bg-orange-500/10 transition-all duration-300 group cursor-default">
                                     <div className="mb-4 text-orange-500"><Icons.Shield /></div>
                                     <p className="text-orange-500/70 text-[10px] uppercase tracking-widest font-mono mb-1">Certificate</p>
-                                    <p className="text-white text-sm font-bold">Founding Beta Tester</p>
+                                    <p className="text-white text-sm font-medium">Founding Beta Tester</p>
                                 </div>
 
                                 <div className="p-5 border border-dashed border-[#222] bg-[#0a0a0a] hover:border-[#333] hover:bg-[#111] transition-all duration-300 group cursor-default">
                                     <div className="mb-4 text-white"><Icons.Wallet /></div>
                                     <p className="text-[#555] text-[10px] uppercase tracking-widest font-mono mb-1">Premium</p>
-                                    <p className="text-[#ccc] text-sm font-bold group-hover:text-white transition-colors">1 Month Free Access</p>
+                                    <p className="text-[#ccc] text-sm font-medium group-hover:text-white transition-colors">1 Month Free Access</p>
                                 </div>
 
                                 <div className="p-5 border border-dashed border-[#222] bg-[#0a0a0a] hover:border-[#333] hover:bg-[#111] transition-all duration-300 group cursor-default">
                                     <div className="mb-4 text-white"><Icons.Rocket /></div>
                                     <p className="text-[#555] text-[10px] uppercase tracking-widest font-mono mb-1">Access</p>
-                                    <p className="text-[#ccc] text-sm font-bold group-hover:text-white transition-colors">Early Features First</p>
+                                    <p className="text-[#ccc] text-sm font-medium group-hover:text-white transition-colors">Early Features First</p>
                                 </div>
 
                                 <div className="p-5 border border-dashed border-[#222] bg-[#0a0a0a] hover:border-[#333] hover:bg-[#111] transition-all duration-300 group cursor-default">
                                     <div className="mb-4 text-white"><Icons.Bot /></div>
                                     <p className="text-[#555] text-[10px] uppercase tracking-widest font-mono mb-1">Influence</p>
-                                    <p className="text-[#ccc] text-sm font-bold group-hover:text-white transition-colors">Direct Roadmap Voice</p>
+                                    <p className="text-[#ccc] text-sm font-medium group-hover:text-white transition-colors">Direct Roadmap Voice</p>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +223,7 @@ export default function BetaPage() {
                                 </div>
                                 <div className="relative">
                                     <span className="text-[10px] font-mono text-red-500 uppercase tracking-widest block mb-1">System Failure</span>
-                                    <h3 className="text-xl md:text-2xl font-bold font-script text-white tracking-tight relative z-10">Tutorial Purgatory</h3>
+                                    <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight relative z-10">Tutorial Purgatory</h3>
                                     <div className="absolute -bottom-1 left-0 w-full h-1 bg-red-500/10 -skew-x-12"></div>
                                 </div>
                             </div>
@@ -254,7 +254,7 @@ export default function BetaPage() {
                                 </div>
                                 <div className="relative">
                                     <span className="text-[10px] font-mono text-orange-500 uppercase tracking-widest block mb-1">System Online</span>
-                                    <h3 className="text-xl md:text-2xl font-bold font-script text-white tracking-tight relative z-10">Builder's Momentum</h3>
+                                    <h3 className="text-xl md:text-2xl font-semibold text-white tracking-tight relative z-10">Builder's Momentum</h3>
                                     <div className="absolute -bottom-1 left-0 w-full h-1 bg-orange-500/20 -skew-x-12"></div>
                                 </div>
                             </div>
@@ -296,7 +296,7 @@ export default function BetaPage() {
                             <div className="w-8 h-8 flex items-center justify-center text-orange-500">
                                 <Icons.Globe />
                             </div>
-                            <h2 className="text-2xl font-bold font-script text-white tracking-tight">Showcase Where It Matters</h2>
+                            <h2 className="text-2xl font-semibold text-white tracking-tight">Showcase Where It Matters</h2>
                         </div>
                         <p className="text-[#666] text-sm">Publish your work where it actually counts.</p>
                     </div>
@@ -332,7 +332,7 @@ export default function BetaPage() {
                                 <div className={`w-12 h-12 flex items-center justify-center bg-[#111] border border-[#222] rounded-lg mb-6 ${item.color} group-hover:border-orange-500/30 group-hover:bg-orange-500/10 group-hover:text-orange-500 transition-all duration-300`}>
                                     {item.icon}
                                 </div>
-                                <h3 className="text-white font-bold text-lg mb-3 group-hover:text-orange-500 transition-colors">{item.platform}</h3>
+                                <h3 className="text-white font-medium text-lg mb-3 group-hover:text-orange-500 transition-colors">{item.platform}</h3>
                                 <p className="text-[#888] text-sm leading-relaxed group-hover:text-[#aaa] transition-colors">{item.desc}</p>
                             </div>
                         ))}
@@ -357,7 +357,7 @@ export default function BetaPage() {
                             <div className="w-8 h-8 flex items-center justify-center text-orange-500">
                                 <Icons.Rocket />
                             </div>
-                            <h2 className="text-2xl font-bold font-script text-white tracking-tight">Project Ideas to Get Started</h2>
+                            <h2 className="text-2xl font-semibold text-white tracking-tight">Project Ideas to Get Started</h2>
                         </div>
                         <p className="text-[#666] text-sm">Real projects. Real skills. Guided by AI, built by you.</p>
                     </div>
@@ -382,7 +382,7 @@ export default function BetaPage() {
                                     {project.icon}
                                 </div>
 
-                                <h3 className="font-bold text-white text-base mb-2 group-hover:text-orange-500 transition-colors">{project.title}</h3>
+                                <h3 className="font-medium text-white text-base mb-2 group-hover:text-orange-500 transition-colors">{project.title}</h3>
                                 <p className="text-[#888] text-xs leading-relaxed group-hover:text-[#aaa] transition-colors">{project.desc}</p>
                             </div>
                         ))}
@@ -399,7 +399,7 @@ export default function BetaPage() {
                 {/* ──────────────── BOTTOM CTA ──────────────── */}
                 <section className="py-28 bg-black border-b border-[#333] text-center">
                     <div className={`px-6 opacity-0 translate-y-4 transition-all duration-700 delay-100 ease-out ${mounted ? "opacity-100 translate-y-0" : ""}`}>
-                        <h2 className="text-3xl md:text-4xl font-bold font-serif text-white mb-4 tracking-tight">
+                        <h2 className="text-3xl md:text-4xl font-semibold text-white mb-4 tracking-tight">
                             Ready to build something{" "}
                             <span className="text-orange-500">real?</span>
                         </h2>

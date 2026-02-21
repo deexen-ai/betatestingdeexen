@@ -71,7 +71,7 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
 
                     <h3 className="text-white font-medium text-lg mb-2 tracking-tight">You're on the list</h3>
                     <p className="text-[#666] text-sm mb-8 leading-relaxed">
-                        Secure spot in <span className="text-[#888] font-medium">Founding 50</span>. <br />
+                        Secure spot in <span className="text-white font-medium">Founding 50</span>. <br />
                         We'll be in touch.
                     </p>
 
@@ -115,7 +115,7 @@ export default function WaitlistForm({ variant = "hero" }: WaitlistFormProps) {
                 <button
                     type="submit"
                     disabled={status === "loading"}
-                    className="absolute right-1 top-1 bottom-1 px-4 bg-white text-black rounded-md text-xs font-bold uppercase tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
+                    className="absolute right-1 top-1 bottom-1 px-4 bg-white text-black rounded-md text-xs font-medium uppercase tracking-wide hover:bg-orange-500 hover:text-white transition-all duration-300 disabled:opacity-50 disabled:cursor-not-allowed"
                 >
                     {status === "loading" ? (
                         <div className="w-4 h-4 border-2 border-black/30 border-t-black rounded-full animate-spin" />

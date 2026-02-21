@@ -22,7 +22,7 @@ export default function FinalCTA() {
     return (
         <section className="py-32 bg-black border-b border-[#333] text-center" ref={sectionRef}>
             <div className="reveal px-6">
-                <h2 className="text-3xl md:text-5xl font-bold font-script text-white mb-6 tracking-tight">
+                <h2 className="text-3xl md:text-5xl font-semibold text-white mb-6 tracking-tight">
                     Join the <span className="text-orange-500">Founding 50.</span>
                 </h2>
                 <p className="text-[#888] mb-10 max-w-md mx-auto">

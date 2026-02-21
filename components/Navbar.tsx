@@ -15,7 +15,7 @@ export default function Navbar() {
                     onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
                 >
                     <img src="/logo.png" alt="Deexen" className="h-8 w-auto object-contain" />
-                    <span className="text-white text-xl font-bold">Deexen AI</span>
+                    <span className="text-white text-xl font-semibold">Deexen AI</span>
                 </div>
 
                 {/* Nav Links + CTA */}

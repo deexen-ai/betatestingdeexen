@@ -21,7 +21,7 @@ export default function Roadmap() {
     return (
         <section className="bg-black border-b border-[#333]" id="roadmap" ref={sectionRef}>
             <div className="p-12 text-center border-b border-[#333] reveal">
-                <h2 className="text-3xl md:text-4xl font-bold font-script text-white tracking-tight">Upcoming Improvements</h2>
+                <h2 className="text-3xl md:text-4xl font-semibold text-white tracking-tight">Upcoming Improvements</h2>
                 <p className="text-[#666] mt-2 flex items-center justify-center gap-2">
                     <span className="w-2 h-2 rounded-full bg-orange-500 animate-pulse" />
                     In Development
@@ -43,7 +43,7 @@ export default function Roadmap() {
                     }
                 ].map((r, i) => (
                     <div key={r.title} className={`p-10 reveal reveal-delay-${i} h-full group hover:bg-[#080808] transition-colors`}>
-                        <h3 className="text-lg font-bold text-white mb-6 uppercase tracking-wider text-xs border-b border-[#222] pb-4 group-hover:border-orange-500/50 group-hover:text-orange-500 transition-colors">
+                        <h3 className="text-lg font-medium text-white mb-6 uppercase tracking-wider text-xs border-b border-[#222] pb-4 group-hover:border-orange-500/50 group-hover:text-orange-500 transition-colors">
                             {r.title}
                         </h3>
                         <ul className="space-y-3 text-sm text-[#888]">

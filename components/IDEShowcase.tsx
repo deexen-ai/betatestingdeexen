@@ -24,7 +24,7 @@ export default function IDEShowcase() {
 
                 {/* Left: Text */}
                 <div className="p-12 lg:p-20 flex flex-col justify-center reveal">
-                    <h2 className="text-3xl lg:text-5xl font-bold font-script text-white mb-6 tracking-tight">
+                    <h2 className="text-3xl lg:text-5xl font-semibold text-white mb-6 tracking-tight">
                         Complete IDE <br /> Features.
                     </h2>
                     <p className="text-[#888] leading-relaxed mb-8">
@@ -87,7 +87,7 @@ export default function IDEShowcase() {
                                 <div className="h-10 border-b border-[#222] flex justify-between items-center px-4 bg-[#0a0a0a]">
                                     <div className="flex items-center gap-2">
                                         <div className="w-2 h-2 rounded-full bg-orange-500 shadow-[0_0_8px_rgba(255,85,0,0.5)] animate-pulse" />
-                                        <span className="text-[10px] font-bold text-[#eee] tracking-widest uppercase">DEEXEN AI</span>
+                                        <span className="text-[10px] font-medium text-[#eee] tracking-widest uppercase">DEEXEN AI</span>
                                     </div>
                                     <span className="text-[9px] text-[#444] font-mono">BETA</span>
                                 </div>

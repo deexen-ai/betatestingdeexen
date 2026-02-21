@@ -41,7 +41,7 @@ export default function Hero() {
                 </div>
 
                 {/* Main Heading */}
-                <h1 className={`text-[3rem] md:text-[4.5rem] font-bold tracking-tighter text-white mb-6 leading-[1.1] opacity-0 translate-y-4 transition-all duration-700 delay-100 ease-out ${mounted ? "opacity-100 translate-y-0" : ""}`}>
+                <h1 className={`text-[3rem] md:text-[4.5rem] font-semibold tracking-tighter text-white mb-6 leading-[1.1] opacity-0 translate-y-4 transition-all duration-700 delay-100 ease-out ${mounted ? "opacity-100 translate-y-0" : ""}`}>
                     Code Smarter. Learn Faster. <br />
                     <span className="text-transparent bg-clip-text bg-gradient-to-br from-white via-white to-gray-500">
                         Join the Waitlist.
@@ -51,7 +51,7 @@ export default function Hero() {
                 {/* Subhead */}
                 <p className={`text-lg text-[#888] max-w-3xl mx-auto mb-10 leading-relaxed opacity-0 translate-y-4 transition-all duration-700 delay-200 ease-out ${mounted ? "opacity-100 translate-y-0" : ""}`}>
                     Deexen is the first AI-Powered IDE that teaches you as you build. <br />
-                    We are currently accepting applications for our <span className="text-orange-400 font-script text-2xl">Founding 50 Beta Cohort</span>.
+                    We are currently accepting applications for our <span className="text-orange-400 font-medium text-2xl">Founding 50 Beta Cohort</span>.
                 </p>
 
                 <div className={`w-full max-w-sm mx-auto opacity-0 translate-y-4 transition-all duration-700 delay-300 ease-out ${mounted ? "opacity-100 translate-y-0" : ""}`}>
