@@ -10,13 +10,19 @@ export default function Navbar() {
             <div className="flex items-center justify-between h-16 px-6 md:px-8">
 
                 {/* Brand */}
-                <div
+                <a
+                    href="/"
                     className="flex items-center gap-2 cursor-pointer group"
-                    onClick={() => window.scrollTo({ top: 0, behavior: "smooth" })}
+                    onClick={(e) => {
+                        if (window.location.pathname === "/") {
+                            e.preventDefault();
+                            window.scrollTo({ top: 0, behavior: "smooth" });
+                        }
+                    }}
                 >
                     <img src="/logo.png" alt="Deexen" className="h-8 w-auto object-contain" />
                     <span className="text-white text-xl font-semibold">Deexen AI</span>
-                </div>
+                </a>
 
                 {/* Nav Links + CTA */}
                 <div className="flex items-center gap-4">

@@ -12,9 +12,6 @@
 }
 
 @layer base {
-  * {
-    font-family: var(--font-sans) !important;
-  }
 
   html {
     background-color: var(--color-bg-outer);
